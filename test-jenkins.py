@@ -16,5 +16,8 @@ final_command = "% s" % cmd2.format(url = url, bind = bind_folder, file = file_n
 ar = str(final_command)
 
 ##print(final_command);
-
+uid = os.getuid()
+gid = os.getgid()
+userid= f"{uid}:{gid}"
+print(userid)
 os.system(ar)
