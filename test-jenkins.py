@@ -12,6 +12,9 @@ cmd2 = "docker run -v $(pwd):{bind}:rw -t owasp/zap2docker-stable zap-baseline.p
 
 final_command = "% s" % cmd2.format(url = url, bind = bind_folder, file = file_name)
 
+
+ar = str(final_command)
+
 ##print(final_command);
 
-os.system(cmd2)
+os.system(ar)
